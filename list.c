@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
-
 PNode ListInit(SDataType data) //初始化单链表
 {
     PNode head = (PNode)malloc(sizeof(Node));
@@ -13,10 +12,8 @@ PNode ListInit(SDataType data) //初始化单链表
     }
     head->_data = data;
     head->_PNext = NULL;
-
     return head;
 }
-
 PNode ListAddEnd(PNode head, SDataType data) //从尾部追加结点
 {
     PNode node, htemp;
@@ -40,7 +37,6 @@ PNode ListAddEnd(PNode head, SDataType data) //从尾部追加结点
     htemp->_PNext = node;
     return head;
 }
-
 PNode ListFindNode(PNode head, char *key) //查找结点
 {
     PNode htemp;
@@ -55,7 +51,6 @@ PNode ListFindNode(PNode head, char *key) //查找结点
     }
     return NULL;
 }
-
 PNode ListInsertNode(PNode head, char *findkey, SDataType data) //从指定位置插入结点
 {
     PNode node, nodetemp;
@@ -76,7 +71,6 @@ PNode ListInsertNode(PNode head, char *findkey, SDataType data) //从指定位�
     }
     return head;
 }
-
 PNode ListMergeNode(PNode head, SDataType data) //合并单链表结点，统计登录次数
 {
     PNode node, nodetemp;
@@ -96,7 +90,6 @@ PNode ListMergeNode(PNode head, SDataType data) //合并单链表结点，统计
     }
     return head;
 }
-
 int ListDeleteNode(PNode head, char* name) //删除指定结点
 {
     PNode node, htemp;
@@ -116,7 +109,6 @@ int ListDeleteNode(PNode head, char* name) //删除指定结点
     }
     return 0;
 }
-
 int ListLength(PNode head) //计算单链表长度
 {
     PNode htemp;
@@ -129,7 +121,6 @@ int ListLength(PNode head) //计算单链表长度
     }
     return len;
 }
-
 void ListAllNode(PNode head) //遍历所有结点
 {
     PNode htemp;
@@ -146,7 +137,6 @@ void ListAllNode(PNode head) //遍历所有结点
         htemp = htemp->_PNext;
     }
 }
-
 void ListDestory(PNode head) //销毁单链表
 {
     PNode nodetemp;

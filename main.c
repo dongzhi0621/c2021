@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "list.h"
 #include "fileread.h"
-
 void test_list() 
 {
     DataType data = {"Ryan", 0};
@@ -16,7 +15,6 @@ void test_list()
     ListNode(head);
     ListDestory(head);
 }
-
 int main()
 {
     PNode head = NULL;
