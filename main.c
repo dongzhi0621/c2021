@@ -4,6 +4,7 @@
 #include "filewrite.h"
 #include "BubbleSort.h"
 #include "QuickSort.h"
+#include "HeapSort.h"
 
 void test_list() 
 {
@@ -36,7 +37,10 @@ int main()
     //BubbleSort(head);
 
     //采用快速排序法排序
-    QuickSort(head);
+    //QuickSort(head);
+
+    //采用堆排序法排序
+    HeapSort(head);
 
     //将排序结果写入文件
     write_file("sort.txt", head);
