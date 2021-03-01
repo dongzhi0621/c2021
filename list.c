@@ -13,6 +13,7 @@ PNode ListInit(SDataType data) //初始化单链表
     }
     head->_data = data;
     head->_PNext = NULL;
+
     return head;
 }
 
@@ -116,7 +117,7 @@ int ListDeleteNode(PNode head, char* name) //删除指定结点
     return 0;
 }
 
-nt ListLength(PNode head) //计算单链表长度
+int ListLength(PNode head) //计算单链表长度
 {
     PNode htemp;
     int len = 0;
